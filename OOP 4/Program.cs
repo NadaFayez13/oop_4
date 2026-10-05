@@ -31,9 +31,9 @@
 
             #region Practical Questions
 
+            #region Main() Checklist a,b,c,d     
             DeliveryAddress address = new DeliveryAddress("123 Main St", "Alexandria", 21500);
 
-            #region Main() Checklist a,b,c,d              
             StandardShipment standard = new StandardShipment("SH001", "Books", 3.0m, 50.0m, address);
 
             ExpressShipment express = new ExpressShipment("SH002", "Mobile Phone", 1.5m, 60.0m, address, 20.0m);
@@ -80,6 +80,19 @@
             DeliveryReport.PrintInsurance(international);
 
             #endregion
+
+            #region Main() Checklist h.
+
+            Console.WriteLine("ITrackable Array - Tracking Statuses");
+
+            ITrackable[] trackableShipments = new ITrackable[] { standard, express, international };
+
+            foreach (ITrackable trackable in trackableShipments)
+            {
+                Console.WriteLine(trackable.GetTrackingStatus());
+            }
+            #endregion
+
             #endregion
         }
     }
