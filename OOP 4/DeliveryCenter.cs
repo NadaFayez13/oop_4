@@ -129,5 +129,17 @@ namespace OOP_4
         {
             get { return count; }
         }
+
+
+        public void PrintTrackingStatuses()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (shipments[i] is ITrackable trackableShipment)
+                {
+                    DeliveryReport.PrintShipment(trackableShipment);
+                }
+            }
+        }
     }
 }
