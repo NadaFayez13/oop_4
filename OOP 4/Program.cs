@@ -56,6 +56,16 @@
 
             #endregion
 
+            #region Main() Checklist f
+
+            Console.WriteLine("Tracking Status");
+            Console.WriteLine();
+
+            center.PrintTrackingStatuses();
+
+            #endregion
+
+
             #endregion
         }
     }
