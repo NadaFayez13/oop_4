@@ -6,9 +6,22 @@ namespace OOP_4
 {
     public class InternationalShipment : Shipment
     {
-        public string destinationCountry { get; set; }
-        public decimal customsFee { get; set; }
 
+        private string destinationCountry;
+        private decimal customsFee;
+        public InternationalShipment(
+            string trackingCode,
+            string description,
+            decimal weight,
+            decimal deliveryFee,
+            DeliveryAddress destination,
+            string destinationCountry,
+            decimal customsFee)
+            : base(trackingCode, description, weight, deliveryFee, destination)
+        {
+            DestinationCountry = destinationCountry;
+            CustomsFee = customsFee;
+        }
         public string DestinationCountry
         {
             get { return destinationCountry; }
@@ -35,23 +48,11 @@ namespace OOP_4
         {
             get
             {
-                return base.EstimatedCost + CustomsFee;
+                return DeliveryFee + (Weight * 5m) + CustomsFee;
             }
         }
 
-        public InternationalShipment(
-            string trackingCode,
-            string description,
-            decimal weight,
-            decimal deliveryFee,
-            DeliveryAddress destination,
-            string destinationCountry,
-            decimal customsFee)
-            : base(trackingCode, description, weight, deliveryFee, destination)
-        {
-            DestinationCountry = destinationCountry;
-            CustomsFee = customsFee;
-        }
+        
 
         public override void PrintShipment()
         {

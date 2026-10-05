@@ -90,13 +90,7 @@ namespace OOP_4
         }
 
         public DeliveryAddress Destination { get; set; }
-        //public virtual decimal EstimatedCost
-        //{
-        //    get
-        //    {
-        //        return DeliveryFee + ((decimal)Weight * 5m);
-        //    }
-        //}
+       
         public abstract decimal EstimatedCost { get; }
         public void UpdateDeliveryFee(decimal newFee)
         {

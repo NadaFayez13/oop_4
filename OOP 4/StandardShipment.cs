@@ -10,7 +10,13 @@ namespace OOP_4
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
         }
-
+        public override decimal EstimatedCost
+        {
+            get
+            {
+                return DeliveryFee + (Weight * 5m);
+            }
+        }
         public override void PrintShipment()
         {
             Console.WriteLine("Standard Shipment");

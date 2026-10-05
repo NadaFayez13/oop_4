@@ -22,7 +22,7 @@ namespace OOP_4
         {
             get
             {
-                return base.EstimatedCost + ExtraFee;
+                return DeliveryFee + (Weight * 5m) + ExtraFee;
             }
         }
         public ExpressShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, decimal extraFee)
