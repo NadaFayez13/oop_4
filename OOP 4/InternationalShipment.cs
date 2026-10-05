@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_4
 {
-    public class InternationalShipment : Shipment
+    public class InternationalShipment : Shipment, ITrackable, IInsurable
     {
 
         private string destinationCountry;
@@ -52,7 +52,18 @@ namespace OOP_4
             }
         }
 
-        
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} has been Delivered.";
+        }
+
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.12m;
+        }
+
 
         public override void PrintShipment()
         {
