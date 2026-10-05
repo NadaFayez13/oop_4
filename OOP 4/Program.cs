@@ -93,6 +93,19 @@
             }
             #endregion
 
+            #region Main() Checklist i.
+
+            Console.WriteLine("IInsurable Array - Insurance Values");
+
+            IInsurable[] insurableShipments = new IInsurable[] { standard, express, international };
+
+            foreach (IInsurable insurable in insurableShipments)
+            {
+                Console.WriteLine($"Insurance Value: {insurable.CalculateInsurance()} EGP");
+            }
+
+            #endregion
+
             #endregion
         }
     }
