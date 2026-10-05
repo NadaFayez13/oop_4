@@ -29,7 +29,26 @@
 
             #endregion
 
+            #region Practical Questions
 
+            DeliveryAddress address = new DeliveryAddress("123 Main St", "Alexandria", 21500);
+
+            #region Main() Checklist a,b,c,d              
+                StandardShipment standard = new StandardShipment("SH001", "Books", 3.0m, 50.0m, address);
+
+                ExpressShipment express = new ExpressShipment("SH002", "Mobile Phone", 1.5m, 60.0m, address, 20.0m);
+
+                InternationalShipment international = new InternationalShipment("SH003", "Laptop", 2.5m, 100.0m, address, "Canada", 150.0m);
+
+                DeliveryCenter center = new DeliveryCenter("Alexandria Hub");
+                center.AddShipment(standard);
+                center.AddShipment(express);
+                center.AddShipment(international);
+            }
+
+            #endregion
+
+            #endregion
         }
     }
-}
+
