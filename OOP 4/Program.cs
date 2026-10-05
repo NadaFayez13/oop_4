@@ -65,7 +65,21 @@
 
             #endregion
 
+            #region Main() Checklist g.
 
+            Console.WriteLine("Insurance");
+            Console.WriteLine();
+
+            Console.Write("Standard Shipment Insurance : ");
+            DeliveryReport.PrintInsurance(standard);
+
+            Console.Write("Express Shipment Insurance  : ");
+            DeliveryReport.PrintInsurance(express);
+
+            Console.Write("International Shipment Insurance : ");
+            DeliveryReport.PrintInsurance(international);
+
+            #endregion
             #endregion
         }
     }
